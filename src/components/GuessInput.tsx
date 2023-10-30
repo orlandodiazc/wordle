@@ -7,11 +7,15 @@ interface UsernameFormElement extends HTMLFormElement {
   readonly elements: FormElements;
 }
 
-export default function GuessInput() {
+export default function GuessInput({
+  addWordToList,
+}: {
+  addWordToList: (word: string) => void;
+}) {
   const [word, setWord] = useState("");
   function handleSubmit(event: FormEvent<UsernameFormElement>) {
     event.preventDefault();
-    console.log(word);
+    addWordToList(word);
     setWord("");
   }
   return (
