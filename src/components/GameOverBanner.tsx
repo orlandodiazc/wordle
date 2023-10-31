@@ -18,7 +18,7 @@ export function GameOverBanner({
         <div className="m-auto mb-2 flex max-w-lg flex-col justify-center">
           <div
             className={clsx(
-              "mb-2 grid h-20 place-content-center rounded-md text-center",
+              "mb-2 grid h-20 place-content-center rounded-md text-center text-white",
               gameStatus == "won" ? "bg-green-700" : "bg-red-700",
             )}
           >

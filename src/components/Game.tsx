@@ -23,7 +23,6 @@ export function Game() {
   const [answer, setAnswer] = useState(sample(WORDS));
   const [guessCounter, setCounter] = useState(0);
   const [gameStatus, setStatus] = useState<GameStatus>("playing");
-  console.log(answer);
 
   function handleNewWord(guess: string) {
     if (gameStatus !== "playing") return;
