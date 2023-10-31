@@ -15,12 +15,12 @@ export default function GuessInput({
   const [word, setWord] = useState("");
   function handleSubmit(event: FormEvent<GuessFormElement>) {
     event.preventDefault();
-    addWordToGrid(word.toUpperCase());
+    addWordToGrid(word);
     setWord("");
   }
   return (
     <form onSubmit={handleSubmit} className="flex h-28 flex-col gap-2">
-      <label htmlFor="guessInput" className="text-xl">
+      <label htmlFor="guessInput" className="text-xl font-semibold">
         Enter guess:
       </label>
       <input
