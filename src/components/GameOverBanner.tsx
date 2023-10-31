@@ -38,8 +38,7 @@ export function GameOverBanner({
           </div>
           <div className="m-auto">
             <button
-              disabled={false}
-              className="h-12 rounded-md bg-blue-900 px-4 py-2 text-lg font-semibold text-white outline-offset-[3px] outline-gray-700 hover:bg-blue-900/90 disabled:pointer-events-none disabled:opacity-50"
+              className="h-11 whitespace-nowrap rounded-md bg-blue-900 px-6 py-2 text-lg font-semibold text-white hover:bg-blue-900/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-700 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
               onClick={handleReset}
             >
               RESTART
