@@ -9,8 +9,10 @@ interface GuessFormElement extends HTMLFormElement {
 
 export default function GuessInput({
   addWordToGrid,
+  disable,
 }: {
   addWordToGrid: (word: string) => void;
+  disable: boolean;
 }) {
   const [word, setWord] = useState("");
   function handleSubmit(event: FormEvent<GuessFormElement>) {
@@ -25,7 +27,8 @@ export default function GuessInput({
       </label>
       <input
         value={word}
-        className="block w-full rounded border-2 border-gray-500 px-4 py-2 text-3xl outline-offset-4 outline-blue-700"
+        disabled={disable}
+        className="block w-full rounded border-2 border-gray-400 px-4 py-2 text-3xl outline-offset-4 outline-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
         id="guessInput"
         type="text"
         pattern="^[A-Za-z]{5}$"

@@ -1,6 +1,6 @@
 import { Cell } from "@components/Game";
 
-export function checkGuess(guess: string, answer: string) {
+export function checkGuess(guess: string, answer: string): Cell[] | null {
   // This constant is a placeholder that indicates we've successfully
   // dealt with this character (it's correct, or misplaced).
   const SOLVED_CHAR = "✓";
