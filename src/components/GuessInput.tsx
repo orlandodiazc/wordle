@@ -3,19 +3,19 @@ import { FormEvent, useState } from "react";
 interface FormElements extends HTMLFormControlsCollection {
   guessInput: HTMLInputElement;
 }
-interface UsernameFormElement extends HTMLFormElement {
+interface GuessFormElement extends HTMLFormElement {
   readonly elements: FormElements;
 }
 
 export default function GuessInput({
-  addWordToList,
+  addWordToGrid,
 }: {
-  addWordToList: (word: string) => void;
+  addWordToGrid: (word: string) => void;
 }) {
   const [word, setWord] = useState("");
-  function handleSubmit(event: FormEvent<UsernameFormElement>) {
+  function handleSubmit(event: FormEvent<GuessFormElement>) {
     event.preventDefault();
-    addWordToList(word);
+    addWordToGrid(word.toUpperCase());
     setWord("");
   }
   return (
