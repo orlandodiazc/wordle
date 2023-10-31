@@ -3,14 +3,14 @@ import { type GameStatus } from "./Game";
 
 export function GameOverBanner({
   gameStatus,
-  guessCounter,
   answer,
   handleReset,
+  guessCounter,
 }: {
   gameStatus: GameStatus;
-  guessCounter: number;
   answer: string;
   handleReset: () => void;
+  guessCounter: number;
 }) {
   return (
     <>
@@ -49,3 +49,5 @@ export function GameOverBanner({
     </>
   );
 }
+
+export function WonBanner() {}

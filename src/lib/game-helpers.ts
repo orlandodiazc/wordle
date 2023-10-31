@@ -9,7 +9,7 @@ export function checkGuess(guess: string, answer: string): Cell[] | null {
     return null;
   }
 
-  const guessChars = guess.toUpperCase().split("");
+  const guessChars = guess.split("");
   const answerChars = answer.split("");
 
   const result: Cell[] = [];
