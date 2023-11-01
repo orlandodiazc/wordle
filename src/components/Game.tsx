@@ -5,10 +5,15 @@ import { useState } from "react";
 import { Guess } from "./Guess";
 import { NUM_OF_GUESSES_ALLOWED } from "@lib/constants";
 import { checkGuess } from "@lib/game-helpers";
-import { GameOverBanner } from "./GameOverBanner";
+import { GameOverModal } from "./GameOverModal";
+import {
+  GameOverBanner,
+  LostDescription,
+  WonDescription,
+} from "./GameOverBanner";
 
 export type Cell = {
-  letter: string;
+  letter: string | null;
   status: null | "correct" | "misplaced" | "incorrect";
 };
 export type WordGrid = Cell[][];
@@ -16,7 +21,7 @@ export type GameStatus = "playing" | "won" | "lost";
 
 export function Game() {
   const [guesses, setGuesses] = useState<WordGrid>([]);
-  const [answer, setAnswer] = useState(sample(WORDS));
+  const [answer, setAnswer] = useState("REACT");
   const [gameStatus, setStatus] = useState<GameStatus>("playing");
 
   function handleNewGuess(guess: string) {
@@ -26,7 +31,7 @@ export function Game() {
     const isWinner = guessResult.every((cell) => cell.status === "correct");
     if (isWinner) {
       setStatus("won");
-    } else if (guesses.length >= NUM_OF_GUESSES_ALLOWED) {
+    } else if (guesses.length + 1 >= NUM_OF_GUESSES_ALLOWED) {
       setStatus("lost");
     }
   }
@@ -39,13 +44,6 @@ export function Game() {
 
   return (
     <div className="px-2 py-2 md:py-6">
-      <GameOverBanner
-        gameStatus={gameStatus}
-        answer={answer}
-        handleReset={handleReset}
-        guessCounter={guesses.length}
-      />
-
       <div className="m-auto flex min-w-[250px] max-w-sm flex-grow flex-col gap-2 px-8 sm:gap-4">
         <div className="flex flex-col justify-center gap-1">
           {range(NUM_OF_GUESSES_ALLOWED).map((index) => (
@@ -54,6 +52,14 @@ export function Game() {
         </div>
         <GuessInput addWordToGrid={handleNewGuess} gameStatus={gameStatus} />
       </div>
+      <GameOverModal open={gameStatus !== "playing"} closeHandler={handleReset}>
+        <GameOverBanner gameStatus={gameStatus}>
+          {gameStatus === "won" && (
+            <WonDescription guessCount={guesses.length} />
+          )}
+          {gameStatus === "lost" && <LostDescription answer={answer} />}
+        </GameOverBanner>
+      </GameOverModal>
     </div>
   );
 }

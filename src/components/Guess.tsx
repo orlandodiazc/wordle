@@ -26,7 +26,7 @@ export function Guess({ guess }: { guess: Cell[] }) {
       {range(5).map((index) => (
         <Cell
           key={index}
-          letter={guess ? guess[index].letter : ""}
+          letter={guess ? guess[index].letter : null}
           status={guess ? guess[index].status : null}
         />
       ))}

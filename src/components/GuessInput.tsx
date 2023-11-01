@@ -38,6 +38,7 @@ export default function GuessInput({
           type="text"
           pattern="^[A-Za-z]{5}$"
           onChange={(event) => setWord(event.target.value)}
+          required
         />
         <button
           disabled={gameStatus !== "playing"}
