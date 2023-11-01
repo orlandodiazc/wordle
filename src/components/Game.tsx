@@ -21,7 +21,7 @@ export type GameStatus = "playing" | "won" | "lost";
 
 export function Game() {
   const [guesses, setGuesses] = useState<WordGrid>([]);
-  const [answer, setAnswer] = useState("REACT");
+  const [answer, setAnswer] = useState(sample(WORDS));
   const [gameStatus, setStatus] = useState<GameStatus>("playing");
 
   function handleNewGuess(guess: string) {
