@@ -1,27 +1,76 @@
-# React + TypeScript + Vite
+<!--
+HOW TO USE:
+This is an example of how you may give instructions on setting up your project locally.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modify this file to match your project and remove sections that don't apply.
 
-Currently, two official plugins are available:
+REQUIRED SECTIONS:
+- Table of Contents
+- About the Project
+  - Built With
+  - Live Demo
+- Getting Started
+- Authors
+- Future Features
+- Contributing
+- Show your support
+- Acknowledgements
+- License
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+OPTIONAL SECTIONS:
+- FAQ
 
-## Expanding the ESLint configuration
+After you're finished please remove all the comments and instructions!
+-->
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+# Wordle <a name="about-project"></a>
 
-- Configure the top-level `parserOptions` property like this:
+**Wordle** is a popular video game built with ReactJS and Typescript, you have 6 chances to guess the correct word, give it a go!
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+[Live Site](wordle-orlandodiazc.vercel.app/)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Built With <a name="built-with"></a>
+
+### Tech Stack <a name="tech-stack"></a>
+
+This project was created using:
+
+  <ul>
+    <li>ReactJS</li>
+    <li>TypeScript</li>
+    <li>TailwindCSS</li>
+  </ul>
+
+<!-- Features -->
+
+### Desktop
+
+![Desktop screenshot](https://github.com/orlandodiazc/wordle/blob/44595c67d82757aab863e0834211dd509a292426/public/opengraph-image.png)
+
+## Getting Started <a name="getting-started"></a>
+
+To get a local copy up and running, follow these steps.
+
+1. Clone the repository into your machine (Or download the .zip file and extract).
+2. Open the project's folder.
+3. Run pnpm i or npm i
+4. Run npm run dev or pnpm dev
+
+## Authors <a name="authors"></a>
+
+👤 **Orlando Diaz**
+
+- GitHub: [@orlandodiazc](https://github.com/orlandodiazc)
+- LinkedIn: [Orlando Diaz Conde](www.linkedin.com/in/orlando-diaz-conde)
+
+<!-- FUTURE FEATURES -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+Give a star if you like this project!
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
