@@ -27,7 +27,7 @@ After you're finished please remove all the comments and instructions!
 
 **Wordle** is a popular video game built with ReactJS and Typescript, you have 6 chances to guess the correct word, give it a go!
 
-[Live Site](wordle-orlandodiazc.vercel.app/)
+[Live Site](https://wordle.odiaz.com.co/)
 
 ## Built With <a name="built-with"></a>
 
